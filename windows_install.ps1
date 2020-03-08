@@ -135,9 +135,11 @@ $keyBindingsJson = '[
 ' | ConvertFrom-Json
 
 $configJson.keybindings += $keyBindingsJson
-
-
 $ubuntuConfig = $configJson.profiles.list | Where-Object {$_.'name' -eq 'Ubuntu-18.04'} 
+if(!$ubuntuConfig){
+	write-host("Ubuntu-18.04 is not found, check your terminal config.json file.")
+	exit
+}
 $ubuntuConfig.name += "❤️"
 $ubuntuConfig |  Add-Member -Type NoteProperty -Name 'fontFace' -Value 'DejaVu Sans Mono for Powerline'
 $ubuntuConfig |  Add-Member -Type NoteProperty -Name 'fontSize' -Value 10
@@ -154,6 +156,6 @@ $configJson | ConvertTo-Json -depth 32| set-content $TERMINAL_CONFIG_OUT_PATH
 
 wget https://github.com/powerline/fonts/archive/master.zip -o fonts.zip
 Expand-Archive -LiteralPath fonts.zip -DestinationPath fonts -Force
-#.\fonts\fonts-master\install.ps1
-
+.\fonts\fonts-master\install.ps1 DejaVu*
+return $true
 

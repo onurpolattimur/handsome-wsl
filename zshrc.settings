@@ -1,0 +1,8 @@
+prompt_context() {
+     prompt_segment 60d white "%(!.%{%F{yellow}%}.)$USER"
+    
+}
+
+precmd() { print "" }
+
+eval `dircolors ~/.dircolors`\n\n\n\n\n\n\n\n\n\n\n
