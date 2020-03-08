@@ -14,6 +14,6 @@ In order to run the script, you need new windows terminal and Ubuntu-18.04 wsl d
 
 
 
-| Tables        | Are           |
+| Before        | After           |
 | ------------- |:-------------:| 
-| <img src="https://miro.medium.com/max/1378/1*5KU2Thaprpmxylv6II7-DQ.png"/>    | right-aligned | 
+| <img src="https://miro.medium.com/max/1378/1*5KU2Thaprpmxylv6II7-DQ.png"/>    | <img src="https://miro.medium.com/max/1735/1*xs__xEPN5yHtgu0Ov4l_RA.png"/> | 
